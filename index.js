@@ -10,12 +10,12 @@ setInterval(function(){
       if(result) 
         console.log("whoiscoming is just tweeted newcomer...".blue);
     });
-    presence.removeExpired(5*1000, function(err, result){
+    presence.removeExpired(15*60*1000, function(err, result){
       if(result) 
         console.log("whoiscoming is just tweeted leftover...".blue);
     });
     console.log("ping".yellow);
   });
-}, 1000);
+}, 60000);
 
 console.log("whoiscoming is running...".green);

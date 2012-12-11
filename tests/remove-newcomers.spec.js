@@ -21,22 +21,22 @@ describe("remove comers", function(){
 
   it("should not remove all expired", function(next){
     setTimeout(function(){
-      presence.removeExpired(1000, function(err, result){
+      presence.removeExpired(5000, function(err, result){
         expect(err).toBe(null);
         expect(result).toBe(false);
         next();
       });
-    }, 500);
+    }, 1000);
   });
 
   it("should remove all expired", function(next){
     setTimeout(function(){
-      presence.removeExpired(1000, function(err, result){
+      presence.removeExpired(5000, function(err, result){
         expect(err).toBe(null);
         expect(result).toBe(true);
         next();
       });
-    }, 1500);
+    }, 4000);
   });
 
 });
