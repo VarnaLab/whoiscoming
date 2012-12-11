@@ -1,4 +1,4 @@
-describe("new comers", function(){
+xdescribe("new comers", function(){
   var hqapi = require("../lib/hqapi");
   var presence = require("../lib/hqpresence");
   var listOfPeople = null;
