@@ -1,4 +1,4 @@
-describe("remove comers", function(){
+xdescribe("remove comers", function(){
   var hqapi = require("../lib/hqapi");
   var presence = require("../lib/hqpresence");
   var listOfPeople = null;

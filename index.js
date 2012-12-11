@@ -1,21 +1,13 @@
-require("colors");
+var HqAPI = require("./lib/hqapi")
+, Messenger = require("./lib/messenger")
+, Presence = require("./lib/presence")
+, TwitterSMS = require("./lib/twitterSMS")
+, Controller = require("./lib/controller")
+, config = require("./config.json");
 
-var hqapi = require("./lib/hqapi");
-var presence = require("./lib/hqpresence");
-
-setInterval(function(){
-  hqapi.getPeople(function(err, list){
-    if(err) throw err;
-    presence.update(list, function(err, result){
-      if(result) 
-        console.log("whoiscoming is just tweeted newcomer...".blue);
-    });
-    presence.removeExpired(15*60*1000, function(err, result){
-      if(result) 
-        console.log("whoiscoming is just tweeted leftover...".blue);
-    });
-    console.log("ping".yellow);
-  });
-}, 60000);
-
-console.log("whoiscoming is running...".green);
+Controller.create({
+  "presence": Presence.create(config.presence)
+  , "messenger": Messenger.create(
+    TwitterSMS.create(config.twitter))
+  , "hqapi": HqAPI.create(config.hqapi)
+}).init();

@@ -1,0 +1,14 @@
+{
+  "twitter":{
+    "consumer_key": "adsfgdfgdfgdfhgfMQ",
+    "consumer_secret": "sggfhfjkjgblkfadsfmdl;sgjnfdnbaljf;lafjlksU",
+    "access_token_key": "Rglkfdjgdlfjgdflkjglsjfglfdskgjldfjgl;jgldsfgfdjkl",
+    "access_token_secret": "cxnvjkavnffgfkjskfhskfsdkjfhdskfkjsdfhdskss"
+  }
+  , "presence": {
+    "ttl":5
+  }
+  , "hqapi": {
+    "uri": "http://hq.varnalab.org/list.php"
+  }
+}
